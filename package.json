@@ -7,7 +7,11 @@
     "build": "gridsome build"
   },
   "dependencies": {
-    "gridsome": "^0.7.0"
+    "@gridsome/source-strapi": "^0.2.0",
+    "axios": "^0.21.1",
+    "express-http-proxy": "^1.6.2",
+    "gridsome": "^0.7.0",
+    "markdown-it": "^12.2.0"
   },
   "devDependencies": {
     "imagemin-pngquant": "^9.0.2"

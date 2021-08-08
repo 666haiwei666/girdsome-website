@@ -4,6 +4,7 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const proxy = require('express-http-proxy'); 
 
 module.exports = function (api) {
   api.loadSource(({ addCollection }) => {

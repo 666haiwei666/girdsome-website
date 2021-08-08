@@ -6,5 +6,32 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-strapi',
+      options: {
+        apiURL: process.env.GRIDSOME_API_URL,
+        queryLimit: 1000, // Defaults to 100
+        contentTypes: ['Jounals', 'Projects', 'Tags'],
+        singleTypes: ['General'],
+        typeName: 'Strapi'
+        // Possibility to login with a Strapi user,
+        // when content types are not publicly available (optional).
+      }
+    }
+  ],
+  templates: {
+    StrapiProjects: [
+      {
+        path: '/project/:id',
+        component: './src/templates/project.vue'
+      }
+    ],
+    StrapiJounals:[
+      {
+        path: '/journal/:id',
+        component: './src/templates/journal.vue'
+      }
+    ]
+  }
 }
