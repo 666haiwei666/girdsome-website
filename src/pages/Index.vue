@@ -77,7 +77,7 @@
     computed: {
       imageUrl() {
         return function (imgurl) {
-          return process.env.GRIDSOME_API_URL + imgurl
+          return imgurl
         }
       },
       general() {
@@ -112,8 +112,9 @@
     text-decoration: none;
     text-align: center;
   }
-  .journal:hover{
-     background-color: #cccccc;
+
+  .journal:hover {
+    background-color: #cccccc;
   }
 
   .title {

@@ -62,7 +62,7 @@
         computed: {
             imageUrl() {
                 return function (imgurl) {
-                    return process.env.GRIDSOME_API_URL + imgurl
+                    return imgurl
                 }
             },
             product() {
